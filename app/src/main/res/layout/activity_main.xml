@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroun_color"
+    tools:context="com.example.filecloud.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/search_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:background="@color/title_back_color">
+
+        <Button
+            android:id="@+id/btn_logo"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/filecloud_logo" />
+        <SearchView
+            android:id="@+id/text_searchview"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btn_search"
+            android:visibility="gone"></SearchView>
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/icon_search"
+            android:onClick="goSearch"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/top_margin_color"
+
+       android:layout_marginTop="55dp"/>
+
+    <ListView
+        android:id="@+id/list_search_files"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="58dp">
+    </ListView>
+    <TextView
+        android:id="@+id/text_no_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_result"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

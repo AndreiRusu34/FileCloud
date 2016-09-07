@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FileCloud</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="no_result">There is no file or dir.</string>
+</resources>
